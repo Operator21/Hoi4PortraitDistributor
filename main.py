@@ -4,11 +4,12 @@ import src.filehelper as FileHelper
 import src.input as Input
 
 newMod = Mod(Input.Get("Enter name of your mod: "), Input.Get("Enter targeted version of game (1.11.4): "))
-
-print("Creating .mod file")
-#print(newMod.ModFile())
-FileHelper.WriteToFile(f"{newMod.FileName()}.mod", newMod.ModFile())
+print("Creating mod file")
+FileHelper.WriteToFile(f"{newMod.FileName()}.mod", newMod.ModFile(True))
 FileHelper.outputFolder += newMod.FileName() + "/"
+
+print("Creating descriptor file")
+FileHelper.WriteToFile("descriptor.mod", newMod.ModFile())
 
 
 while not FileHelper.FolderHasFiles("input"):

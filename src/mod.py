@@ -12,12 +12,14 @@ class Mod:
     def FileName(self):
         return self.name.lower().replace(" ", "_")
 
-    def ModFile(self):
-        return inspect.cleandoc(f"""version="1"
-                tags={{
-                    "Graphics"
-                }}
-                name="{self.name}"
-                supported_version="{self.gameVersion}"
-                path="mod/{self.FileName()}""")
-        
+    def ModFile(self, path = False):
+        mod = (
+            'name="' + self.name + '"'
+            'tags={'
+                '"Graphics"'
+            '}'
+            'supported_version="1.*"'
+            )
+        if path:
+            mod += 'path="mod/' + self.FileName() + '"'
+        return mod
