@@ -34,6 +34,13 @@ while True:
 
 fileList = FileHelper.ReadFile(FileHelper.structureFolder + selectedStructure)
 
+max = len(imageList)
+pointer = 0
+
 for file in fileList:
-    FileHelper.CopyFile(FileHelper.inputFolder + imageList[0], FileHelper.leadersFolder() + file)
+    FileHelper.CopyFile(FileHelper.inputFolder + imageList[pointer], FileHelper.leadersFolder() + file)
     print(FileHelper.leadersFolder() + file)
+    if(pointer + 1 >= max):
+        pointer = 0
+    else:
+        pointer += 1;
