@@ -5,7 +5,8 @@ inputFolder = "input/"
 structureFolder = "structure/"
 
 def leadersFolder():
-    return outputFolder + "gfx/leaders/"
+    #return outputFolder + "gfx/leaders/"
+    return outputFolder + ""
 
 def CreateFolder(folder):
     os.makedirs(os.path.dirname(folder), exist_ok=True)
