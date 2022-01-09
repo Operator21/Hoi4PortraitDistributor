@@ -1,10 +1,6 @@
 ger_leader1.dds
 ger_leader2.dds
 ger_leader3.dds
-leader_marshal_unknown.dds
-leader_unknown.dds
-leader_unknown_female.dds
-operative_unknown.dds
 AFG\Portrait_Afghanistan_Mohammed_Zahir_Shah.dds
 Africa\Portrait_Africa_Generic_1.dds
 Africa\Portrait_Africa_Generic_2.dds
