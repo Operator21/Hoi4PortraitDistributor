@@ -7,13 +7,11 @@ class Mod:
         return self.name.lower().replace(" ", "_")
 
     def ModFile(self, path = False):
-        mod = (
-            'name="' + self.name + '"'
-            'tags={'
-                '"Graphics"'
-            '}'
-            'supported_version="1.*"'
-            )
-        if path:
-            mod += 'path="mod/' + self.FileName() + '"'
-        return mod
+        return f"""
+            name="{self.name}"
+            tags={{
+                "Graphics"
+            }}
+            supported_version="1.*"
+            {f'path="mod/{self.FileName()}"' if path else ""}
+        """
